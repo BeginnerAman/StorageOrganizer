@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Organizer | Intelligent Desktop Storage Optimization for Windows</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Storage Organizer is a high performance local desktop storage analyzer, MD5 duplicate file detector, junk cleaner, and automated folder organizer for Windows 10 and 11. 100% offline with full rollback undo.">
+    <meta name="keywords" content="storage organizer, windows duplicate finder, disk cleaner, md5 deduplication, file organizer, clean disk space, portable storage cleaner, offline file organizer, windows 11 disk utility, duplicate file remover">
+    <meta name="author" content="Aman Vishwakarma">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://beginneraman.github.io/StorageOrganizer/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beginneraman.github.io/StorageOrganizer/">
+    <meta property="og:title" content="Storage Organizer | Intelligent Desktop Storage Optimization">
+    <meta property="og:description" content="Organize messy folders, eliminate duplicate files with MD5 hashing, and recover disk space safely. 100% offline, zero cloud telemetry.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/BeginnerAman/StorageOrganizer/main/docs/images/logo.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Storage Organizer | Desktop Storage Utility for Windows">
+    <meta name="twitter:description" content="Intelligent local storage analysis, content-based MD5 deduplication, and automated organization. 100% private and offline.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/BeginnerAman/StorageOrganizer/main/docs/images/logo.png">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <!-- Google Fonts: Space Mono & DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Schema.org Structured Data (JSON-LD) for Search Indexing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Storage Organizer",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "UtilitiesApplication",
+      "softwareVersion": "3.27.8",
+      "fileSize": "18.05MB",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Aman Vishwakarma",
+        "url": "https://github.com/BeginnerAman"
+      },
+      "downloadUrl": "https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer.exe",
+      "description": "High performance local desktop storage analyzer, MD5 duplicate detector, junk cleaner, and automated folder organizer for Windows."
+    }
+    </script>
+
+    <!-- Custom Industrial Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Cyber Ambient Blobs -->
+    <div class="bg-blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <img src="images/logo.png" alt="Storage Organizer Logo" class="nav-logo">
+                <span class="nav-title">Storage Organizer</span>
+                <span class="nav-version">v3.27.8</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#workflow">How It Works</a>
+                <a href="#comparison">Why Us</a>
+                <a href="#specs">Specs</a>
+                <a href="#faq">FAQ</a>
+                <a href="#download" class="nav-btn">Download</a>
+                <a href="https://github.com/BeginnerAman/StorageOrganizer" target="_blank" rel="noopener noreferrer" class="github-btn" title="View Source on GitHub">
+                    <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                    <span>Star on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>DESKTOP STORAGE UTILITY FOR WINDOWS</span>
+            </div>
+
+            <div class="hero-logo-box">
+                <img src="images/logo.png" alt="Storage Organizer App Icon" class="hero-logo">
+            </div>
+
+            <h1 class="hero-title">Storage Organizer</h1>
+            <p class="hero-tagline">Intelligent local storage analysis, content-based MD5 deduplication, and automated organization for Windows.</p>
+
+            <div class="hero-pills">
+                <span class="pill"><i data-lucide="tag"></i> v3.27.8</span>
+                <span class="pill"><i data-lucide="monitor"></i> Windows 10 / 11 (64-bit)</span>
+                <span class="pill"><i data-lucide="shield-check"></i> 100% Offline & Private</span>
+                <span class="pill"><i data-lucide="zap"></i> Fast & Lightweight</span>
+            </div>
+
+            <div class="hero-actions" id="download">
+                <a href="https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer.exe" class="btn btn-primary">
+                    <i data-lucide="download" class="btn-icon"></i>
+                    <div class="btn-text">
+                        <span class="btn-main">Download Standalone (.exe)</span>
+                        <span class="btn-sub">Single portable file, ~18 MB</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer-Portable.zip" class="btn btn-secondary">
+                    <i data-lucide="archive" class="btn-icon"></i>
+                    <div class="btn-text">
+                        <span class="btn-main">Download Portable (.zip)</span>
+                        <span class="btn-sub">Zero install, extract & run</span>
+                    </div>
+                </a>
+            </div>
+
+            <p class="hero-footnote">Compatible with Windows 10 and Windows 11. No background services. No cloud dependencies.</p>
+        </div>
+    </header>
+
+    <!-- Core Highlights / Metrics Bar -->
+    <section class="metrics-bar">
+        <div class="container metrics-grid">
+            <div class="metric-item">
+                <div class="metric-num">100%</div>
+                <div class="metric-label">Offline & Telemetry Free</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-num">0%</div>
+                <div class="metric-label">False Positive Hash Match</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-num">&lt; 60 MB</div>
+                <div class="metric-label">Lightweight RAM Usage</div>
+            </div>
+            <div class="metric-item">
+                <div class="metric-num">1-Click</div>
+                <div class="metric-label">Instant Full Session Undo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ENGINEERED FOR CONTROL</span>
+                <h2 class="section-title">Everything you need to master your disk space</h2>
+                <p class="section-desc">Designed with safety-first principles. Your files are organized locally without ever putting personal data at risk.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon icon-blue">
+                        <i data-lucide="folder-tree"></i>
+                    </div>
+                    <h3 class="feature-title">Smart Categorization</h3>
+                    <p class="feature-desc">Automatically sorts unstructured folders into structured directories: Media, RAW Photos, Documents, Code Repositories, Archives, and Executables.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-yellow">
+                        <i data-lucide="copy-check"></i>
+                    </div>
+                    <h3 class="feature-title">MD5 Duplicate Detection</h3>
+                    <p class="feature-desc">Two-phase deduplication engine matches byte size before executing full MD5 hash checks, guaranteeing zero false positives when deleting redundant copies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-red">
+                        <i data-lucide="trash-2"></i>
+                    </div>
+                    <h3 class="feature-title">Junk & Cache Elimination</h3>
+                    <p class="feature-desc">Identifies orphaned build cache, editor backups, application log dumps, partial downloads, and empty ghost directories safely.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-green">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="feature-title">Dry-Run Preview Safety</h3>
+                    <p class="feature-desc">Generate an interactive visual audit of every single proposed move or action before touching your disk. Select or exclude files individually.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-cyan">
+                        <i data-lucide="history"></i>
+                    </div>
+                    <h3 class="feature-title">1-Click Rollback Engine</h3>
+                    <p class="feature-desc">Every operation is permanently recorded in a local SQLite transaction log. Accidentally moved a folder? Revert it back to its original path in one click.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon icon-purple">
+                        <i data-lucide="sliders"></i>
+                    </div>
+                    <h3 class="feature-title">Custom Automation Rules</h3>
+                    <p class="feature-desc">Build powerful custom sorting routines with custom regular expressions, extension groups, size thresholds, and file age conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="workflow" class="section bg-surface">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">THE 3-STEP PIPELINE</span>
+                <h2 class="section-title">How Storage Organizer Works</h2>
+                <p class="section-desc">A frictionless workflow designed to save gigabytes of storage in minutes.</p>
+            </div>
+
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="step-badge">STEP 01</div>
+                    <div class="workflow-icon"><i data-lucide="hard-drive"></i></div>
+                    <h3 class="workflow-title">Select Target Directory</h3>
+                    <p class="workflow-desc">Choose any folder, USB drive, or partition. Storage Organizer indexes thousands of files with full metadata in seconds.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="step-badge">STEP 02</div>
+                    <div class="workflow-icon"><i data-lucide="eye"></i></div>
+                    <h3 class="workflow-title">Review the Audit Plan</h3>
+                    <p class="workflow-desc">Inspect categorized breakdown tables, review duplicate groups, and filter junk files. Nothing changes until you give the go-ahead.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="step-badge">STEP 03</div>
+                    <div class="workflow-icon"><i data-lucide="sparkles"></i></div>
+                    <h3 class="workflow-title">Organize with Peace of Mind</h3>
+                    <p class="workflow-desc">Hit Organize. Files are placed into tidy directories with atomic precision. Full undo history is retained for instant rollback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">UNCOMPROMISING ARCHITECTURE</span>
+                <h2 class="section-title">Why Storage Organizer Stands Apart</h2>
+                <p class="section-desc">Compare the transparency, safety, and control of Storage Organizer against generic utility cleaners.</p>
+            </div>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <colgroup>
+                        <col style="width: 28%;">
+                        <col style="width: 36%;">
+                        <col style="width: 36%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Capability</th>
+                            <th class="col-highlight">Storage Organizer</th>
+                            <th>Generic Disk Cleaners</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Privacy & Telemetry</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> 100% Offline (Zero Tracking)</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Cloud Analytics & Ads</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Operation Safety</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> Dry-Run Plan Preview</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Immediate Blind Deletion</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1-Click Rollback</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> Session Undo History</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Irreversible File Moves</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Duplicate Detection</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> Two-Phase MD5 Hash Check</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Basic Name or Date Matching</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>File Organization</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> Structured Category Folders</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Temp File Deletion Only</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Automation Rules</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> Regex, Size, Age & Category Rules</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> Locked Behind Paid Subscriptions</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>System Footprint</td>
+                            <td class="col-highlight">
+                                <span class="cell-status is-positive"><i data-lucide="check"></i> ~60 MB RAM, Portable Binary</span>
+                            </td>
+                            <td>
+                                <span class="cell-status is-negative"><i data-lucide="x"></i> 300+ MB Background Bloat</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Specs Section -->
+    <section id="specs" class="section bg-surface">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">UNDER THE HOOD</span>
+                <h2 class="section-title">Technical Specifications</h2>
+                <p class="section-desc">Built for reliability, speed, and standard Windows 64-bit systems.</p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <span class="spec-key">Application Version</span>
+                    <span class="spec-val">v3.27.8</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">Supported Operating Systems</span>
+                    <span class="spec-val">Windows 10 / Windows 11 (64-bit)</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">Core Runtime</span>
+                    <span class="spec-val">Python 3.13 + Flask WSGI Host</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">GUI Engine</span>
+                    <span class="spec-val">Microsoft Edge Chromium (WebView2)</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">Hashing Algorithm</span>
+                    <span class="spec-val">Two-Stage Block MD5 / SHA-256</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">Bundle Size</span>
+                    <span class="spec-val">~18.05 MB (Standalone Executable)</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">Network Connectivity</span>
+                    <span class="spec-val">None (Loopback 127.0.0.1 Daemon Only)</span>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-key">License</span>
+                    <span class="spec-val">MIT Open Source</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+                <h2 class="section-title">Got questions? We have answers.</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">Will Storage Organizer delete files without my knowledge?</h3>
+                    <p class="faq-answer">No. Storage Organizer operates under a strict Safe Mode policy. It generates a comprehensive Dry-Run Preview of every proposed file move or deletion first. Nothing is touched on your disk until you review the plan and click Proceed.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How does the 1-Click Rollback engine work?</h3>
+                    <p class="faq-answer">Every organization session records the exact original source and destination paths of every moved file. If you wish to undo an operation, navigate to Undo History and click Rollback. The files are atomically moved back to their original locations.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the difference between the .exe and .zip downloads?</h3>
+                    <p class="faq-answer">The <strong>Standalone (.exe)</strong> is a single executable file that you can place anywhere (such as Desktop or Program Files) and run directly. The <strong>Portable (.zip)</strong> contains the unpacked application folder, which starts instantaneously with zero temporary decompression overhead.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Does Storage Organizer require an active internet connection?</h3>
+                    <p class="faq-answer">No. The software runs 100% offline. The internal web server communicates only across your local computer loopback interface (127.0.0.1). No data or analytics are ever transmitted over the network.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Download CTA -->
+    <section class="download-cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to optimize your storage?</h2>
+                <p class="cta-desc">Download Storage Organizer v3.27.8 now. Clean messy directories and eliminate redundant duplicates in minutes.</p>
+
+                <div class="cta-buttons">
+                    <a href="https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer.exe" class="btn btn-primary">
+                        <i data-lucide="download"></i> Download StorageOrganizer.exe
+                    </a>
+                    <a href="https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer-Portable.zip" class="btn btn-secondary">
+                        <i data-lucide="archive"></i> Download Portable (.zip)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="Logo" class="footer-logo">
+                <span class="footer-title">Storage Organizer</span>
+                <span class="footer-version">v3.27.8</span>
+            </div>
+
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#workflow">Workflow</a>
+                <a href="#specs">Specifications</a>
+                <a href="https://github.com/BeginnerAman/StorageOrganizer" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                <a href="https://github.com/BeginnerAman/StorageOrganizer/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Storage Organizer. Released under the MIT License.</p>
+                <p class="footer-credit">Built by <strong>Aman Vishwakarma</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

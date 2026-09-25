@@ -1,0 +1,48 @@
+# Core Application Source (Local Development Only)
+app.py
+run.py
+build.py
+generate_icon.py
+requirements.txt
+config.json
+source_icon.jpg
+app_icon.png
+core/
+data/
+static/
+templates/
+tests/
+utils/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# PyInstaller / Build
+build/
+dist/
+*.spec
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local user session & caches
+data/.secret_key
+.secret_key
+data/sessions/*.json
+!data/sessions/.gitkeep
+data/undo_history/*
+!data/undo_history/.gitkeep
+data/*.db
+data/*.json
+*.log
+.DS_Store
+Thumbs.db
