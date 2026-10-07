@@ -78,7 +78,7 @@
     <!-- Navigation Bar -->
     <nav id="navbar" class="glass-nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-brand" onclick="event.preventDefault(); document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' }); history.replaceState(null, '', window.location.pathname);">
+            <a href="#hero" class="nav-brand">
                 <img src="images/logo.png" alt="Storage Organizer Logo" class="nav-logo">
                 <span class="nav-title">Storage Organizer</span>
                 <span class="nav-version">v3.27.8</span>
@@ -480,27 +480,9 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons & Auto Hero Framing -->
+    <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
-
-        // Always align to exact #hero view while keeping the clean URL without hash
-        (function() {
-            if ('scrollRestoration' in history) {
-                history.scrollRestoration = 'manual';
-            }
-            function frameHero() {
-                var hero = document.getElementById('hero');
-                if (hero && (!window.location.hash || window.location.hash === '#hero')) {
-                    hero.scrollIntoView({ behavior: 'instant', block: 'start' });
-                    if (window.location.hash) {
-                        history.replaceState(null, '', window.location.pathname + window.location.search);
-                    }
-                }
-            }
-            frameHero();
-            window.addEventListener('load', frameHero);
-        })();
     </script>
 </body>
 </html>

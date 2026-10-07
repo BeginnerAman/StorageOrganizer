@@ -238,9 +238,10 @@ a:hover {
 /* ── Hero Section ── */
 .hero-section {
     position: relative;
-    padding: 70px 0 60px;
+    padding: 14px 0 60px;
     text-align: center;
     z-index: 1;
+    scroll-margin-top: 57px;
 }
 
 .hero-content {
