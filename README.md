@@ -53,8 +53,8 @@
 
 | Package | Specification | Direct Download Link |
 | :--- | :--- | :--- |
-| **Standalone Executable (.exe)** | Single file binary. No installation or Python setup required. | [Download StorageOrganizer.exe](https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer.exe) |
-| **Portable Archive (.zip)** | Zero-install portable folder. Extract and launch immediately. | [Download StorageOrganizer-Portable.zip](https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer-Portable.zip) |
+| **Standalone Executable (.exe)** | Single file binary. No installation or Python setup required (~18.0 MB). | [Download StorageOrganizer.exe](https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer.exe) |
+| **Portable Archive (.zip)** | Zero-install portable folder. Extract and launch immediately (~18.0 MB). | [Download StorageOrganizer-Portable.zip](https://github.com/BeginnerAman/StorageOrganizer/releases/download/v3.27.8/StorageOrganizer-Portable.zip) |
 
 ---
 
@@ -71,7 +71,7 @@
 * **Core Engine:** Python 3.13, Flask 3.0 WSGI Server (Localhost daemon)
 * **Desktop Shell:** PyWebView 6.x with Microsoft Edge Chromium (WebView2)
 * **Frontend:** Semantic HTML5, Modular CSS3, ES6 JavaScript, Space Mono and DM Sans typography
-* **Packaging:** PyInstaller single-file compiler with optimized binary footprint (~18 MB)
+* **Packaging:** PyInstaller single-file compiler with optimized binary footprint (~18.0 MB)
 * **Storage and Safety:** Thread-safe JSON configuration, SHA-256 session logging, atomic file rollback
 
 ---
