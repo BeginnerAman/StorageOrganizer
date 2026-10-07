@@ -78,11 +78,13 @@
     <!-- Navigation Bar -->
     <nav id="navbar" class="glass-nav">
         <div class="nav-container">
-            <a href="#hero" class="nav-brand">
-                <img src="images/logo.png" alt="Storage Organizer Logo" class="nav-logo">
-                <span class="nav-title">Storage Organizer</span>
+            <div class="nav-brand-wrapper">
+                <a href="#hero" class="nav-brand">
+                    <img src="images/logo.png" alt="Storage Organizer Logo" class="nav-logo">
+                    <span class="nav-title">Storage Organizer</span>
+                </a>
                 <span class="nav-version" onclick="handleDevEasterEgg(event)" title="Storage Organizer v3.27.8">v3.27.8</span>
-            </a>
+            </div>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#workflow">How It Works</a>
@@ -606,8 +608,12 @@
 
         function handleDevEasterEgg(e) {
             if (e) {
-                e.preventDefault();
+                if (e.cancelable) e.preventDefault();
                 e.stopPropagation();
+            }
+            if (window.getSelection) {
+                var sel = window.getSelection();
+                if (sel.removeAllRanges) sel.removeAllRanges();
             }
             devClickCount++;
             clearTimeout(devClickTimer);

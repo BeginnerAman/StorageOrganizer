@@ -49,6 +49,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -146,10 +147,35 @@ a:hover {
     justify-content: space-between;
 }
 
+.nav-brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
 .nav-brand {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    outline: none !important;
+}
+
+.nav-brand:focus,
+.nav-brand:active,
+.nav-brand:visited {
+    outline: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 .nav-logo {
@@ -157,6 +183,10 @@ a:hover {
     height: 28px;
     border-radius: 6px;
     object-fit: contain;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: none;
 }
 
 .nav-title {
@@ -165,6 +195,10 @@ a:hover {
     font-size: 1.05rem;
     color: var(--text-primary);
     letter-spacing: 0.04em;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
 }
 
 .nav-version {
@@ -178,13 +212,24 @@ a:hover {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.15s ease;
-    user-select: none;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    touch-action: manipulation;
+    outline: none !important;
 }
 
 .nav-version:hover {
     background: rgba(79, 156, 249, 0.22);
     border-color: var(--accent);
     transform: translateY(-1px);
+}
+
+.nav-version:active {
+    outline: none !important;
+    background: rgba(79, 156, 249, 0.3);
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 .nav-links {
@@ -807,6 +852,10 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 10px;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
 }
 
 .footer-logo {
@@ -814,6 +863,10 @@ a:hover {
     height: 24px;
     border-radius: 5px;
     object-fit: contain;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: none;
 }
 
 .footer-title {
@@ -821,6 +874,10 @@ a:hover {
     font-weight: 700;
     font-size: 1rem;
     color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
 }
 
 .footer-version {
@@ -833,7 +890,12 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.12);
     cursor: pointer;
     transition: all 0.15s ease;
-    user-select: none;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    touch-action: manipulation;
+    outline: none !important;
 }
 
 .footer-version:hover {
@@ -841,6 +903,12 @@ a:hover {
     color: var(--accent);
     border-color: var(--accent);
     transform: translateY(-1px);
+}
+
+.footer-version:active {
+    outline: none !important;
+    background: rgba(79, 156, 249, 0.25);
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 .footer-links {
@@ -952,6 +1020,9 @@ a:hover {
     .nav-container {
         padding: 10px 16px;
     }
+    .nav-brand-wrapper {
+        gap: 8px;
+    }
     .nav-brand {
         gap: 8px;
     }
@@ -1031,14 +1102,16 @@ a:hover {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.82);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 16px;
     animation: devFadeIn 0.2s ease forwards;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .dev-modal-overlay.hidden {
@@ -1055,11 +1128,13 @@ a:hover {
     border: 1px solid rgba(79, 156, 249, 0.35);
     border-radius: var(--radius-md);
     width: 100%;
-    max-width: 520px;
+    max-width: 500px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85), 0 0 32px rgba(79, 156, 249, 0.12);
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     animation: devScaleUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -1069,6 +1144,7 @@ a:hover {
 }
 
 .dev-modal-header {
+    flex-shrink: 0;
     padding: 12px 20px;
     background: #0b0d12;
     border-bottom: 1px solid var(--border);
@@ -1139,6 +1215,11 @@ a:hover {
     padding: 0;
     display: flex;
     flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 /* Creator Profile Card */
@@ -1357,12 +1438,14 @@ a:hover {
 }
 
 .dev-modal-footer {
-    padding: 12px 22px;
+    flex-shrink: 0;
+    padding: 12px 20px;
     background: #0b0d12;
     border-top: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .dev-btn {
@@ -1405,12 +1488,146 @@ a:hover {
 }
 
 @media (max-width: 540px) {
-    .dev-social-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+    #toast-container {
+        bottom: 16px;
+        right: 14px;
+        left: 14px;
+        align-items: center;
     }
+
+    .toast {
+        max-width: 100%;
+        width: auto;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    .dev-modal-overlay {
+        padding: 10px;
+    }
+
+    .dev-modal-box {
+        max-width: 100%;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 12px;
+    }
+
+    .dev-modal-header {
+        padding: 10px 14px;
+    }
+
+    .dev-title-text {
+        font-size: 10px;
+    }
+
+    .dev-mode-tag {
+        font-size: 7.5px;
+        padding: 1px 5px;
+    }
+
+    .dev-profile-card {
+        padding: 12px 14px;
+        gap: 12px;
+    }
+
+    .dev-avatar-glow {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    .dev-name {
+        font-size: 13.5px;
+    }
+
+    .dev-role-badge {
+        font-size: 8px;
+        padding: 1px 6px;
+    }
+
+    .dev-bio {
+        font-size: 10.5px;
+        line-height: 1.35;
+    }
+
+    /* Social grid: keep 3 clean compact columns side-by-side */
+    .dev-social-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        padding: 10px 14px;
+    }
+
+    .dev-social-card {
+        padding: 8px 4px;
+        gap: 4px;
+        border-radius: 6px;
+    }
+
+    .dev-social-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+    }
+
+    .dev-social-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .dev-social-label {
+        font-size: 10px;
+    }
+
+    .dev-social-handle {
+        font-size: 8px;
+    }
+
+    .dev-social-arrow {
+        display: none;
+    }
+
+    /* Diagnostics: 2 clean columns side-by-side */
+    .dev-diag-box {
+        padding: 12px 14px;
+    }
+
+    .dev-diag-header {
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .dev-diag-title {
+        font-size: 8.5px;
+    }
+
+    .dev-diag-status {
+        font-size: 7.5px;
+    }
+
     .dev-diag-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 10px;
+    }
+
+    .dev-diag-k {
+        font-size: 9px;
+    }
+
+    .dev-diag-v {
+        font-size: 10px;
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .dev-modal-footer {
+        padding: 10px 14px;
+    }
+
+    .dev-btn {
+        padding: 7px 12px;
+        font-size: 11px;
     }
 }
