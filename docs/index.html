@@ -81,7 +81,7 @@
             <a href="#hero" class="nav-brand">
                 <img src="images/logo.png" alt="Storage Organizer Logo" class="nav-logo">
                 <span class="nav-title">Storage Organizer</span>
-                <span class="nav-version">v3.27.8</span>
+                <span class="nav-version" onclick="handleDevEasterEgg(event)" title="Storage Organizer v3.27.8">v3.27.8</span>
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
@@ -462,7 +462,7 @@
             <div class="footer-brand">
                 <img src="images/logo.png" alt="Logo" class="footer-logo">
                 <span class="footer-title">Storage Organizer</span>
-                <span class="footer-version">v3.27.8</span>
+                <span class="footer-version" onclick="handleDevEasterEgg(event)" title="Storage Organizer v3.27.8">v3.27.8</span>
             </div>
 
             <div class="footer-links">
@@ -480,9 +480,238 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Toast Notification Container -->
+    <div id="toast-container" role="status" aria-live="polite"></div>
+
+    <!-- Developer Vault Easter Egg Modal -->
+    <div id="devVaultModal" class="dev-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="devVaultTitle" onclick="if(event.target===this)closeDevVaultModal()">
+        <div class="dev-modal-box">
+            <div class="dev-modal-header">
+                <div class="dev-header-left">
+                    <span class="dev-badge-pulse"></span>
+                    <span id="devVaultTitle" class="dev-title-text">DEVELOPER VAULT</span>
+                    <span class="dev-mode-tag">SECRET UNLOCKED</span>
+                </div>
+                <button class="dev-close-btn" onclick="closeDevVaultModal()" aria-label="Close Developer Vault">&times;</button>
+            </div>
+
+            <div class="dev-modal-body">
+                <!-- Creator Profile Card -->
+                <div class="dev-profile-card">
+                    <div class="dev-avatar-glow">
+                        <img src="images/logo.png" alt="Storage Organizer Logo" class="dev-avatar-img" />
+                    </div>
+                    <div class="dev-profile-info">
+                        <div class="dev-name-row">
+                            <h2 class="dev-name">Aman Vishwakarma</h2>
+                            <span class="dev-role-badge">Lead Architect</span>
+                        </div>
+                        <p class="dev-bio">Architecting high-performance offline desktop utilities with zero cloud telemetry.</p>
+                    </div>
+                </div>
+
+                <!-- Social Connect Grid -->
+                <div class="dev-social-grid">
+                    <a href="https://github.com/BeginnerAman" target="_blank" rel="noopener noreferrer" class="dev-social-card" title="Open GitHub Profile">
+                        <div class="dev-social-icon icon-github">
+                            <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </div>
+                        <div class="dev-social-text">
+                            <span class="dev-social-label">GitHub</span>
+                            <span class="dev-social-handle">BeginnerAman</span>
+                        </div>
+                        <span class="dev-social-arrow">&nearr;</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/amanv-data" target="_blank" rel="noopener noreferrer" class="dev-social-card" title="Open LinkedIn Profile">
+                        <div class="dev-social-icon icon-linkedin">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <div class="dev-social-text">
+                            <span class="dev-social-label">LinkedIn</span>
+                            <span class="dev-social-handle">amanv-data</span>
+                        </div>
+                        <span class="dev-social-arrow">&nearr;</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/amanv_data/" target="_blank" rel="noopener noreferrer" class="dev-social-card" title="Open Instagram Profile">
+                        <div class="dev-social-icon icon-instagram">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </div>
+                        <div class="dev-social-text">
+                            <span class="dev-social-label">Instagram</span>
+                            <span class="dev-social-handle">amanv_data</span>
+                        </div>
+                        <span class="dev-social-arrow">&nearr;</span>
+                    </a>
+                </div>
+
+                <!-- Live Diagnostics Section -->
+                <div class="dev-diag-box">
+                    <div class="dev-diag-header">
+                        <span class="dev-diag-title">SYSTEM RUNTIME DIAGNOSTICS</span>
+                        <span class="dev-diag-status">ONLINE (127.0.0.1)</span>
+                    </div>
+                    <div class="dev-diag-grid">
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">Software Version:</span>
+                            <span class="dev-diag-v mono">v3.27.8 (Stable)</span>
+                        </div>
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">Core Runtime:</span>
+                            <span class="dev-diag-v mono">Python 3.13.7 (64-bit)</span>
+                        </div>
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">GUI Shell:</span>
+                            <span class="dev-diag-v mono">Microsoft Edge Chromium (WebView2)</span>
+                        </div>
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">Storage Engine:</span>
+                            <span class="dev-diag-v mono">Atomic JSON Session Logs</span>
+                        </div>
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">Network Protocol:</span>
+                            <span class="dev-diag-v mono">Loopback Daemon Only (100% Offline)</span>
+                        </div>
+                        <div class="dev-diag-item">
+                            <span class="dev-diag-k">Architecture:</span>
+                            <span class="dev-diag-v mono">Unified Frameless Executive Shell</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dev-modal-footer">
+                <button class="dev-btn dev-btn-outline" onclick="copyDevDiagnostics()">Copy System Specs</button>
+                <button class="dev-btn dev-btn-primary" onclick="closeDevVaultModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons & Easter Egg Handler -->
     <script>
         lucide.createIcons();
+
+        // Developer Vault 7-Click Easter Egg
+        let devClickCount = 0;
+        let devClickTimer = null;
+
+        function handleDevEasterEgg(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            devClickCount++;
+            clearTimeout(devClickTimer);
+            devClickTimer = setTimeout(function() {
+                devClickCount = 0;
+            }, 2200);
+
+            if (devClickCount >= 4 && devClickCount < 7) {
+                const remaining = 7 - devClickCount;
+                showToast(remaining + ' clicks away from Developer Vault', 'info', 1000);
+            } else if (devClickCount >= 7) {
+                devClickCount = 0;
+                openDevVaultModal();
+            }
+        }
+
+        function openDevVaultModal() {
+            const modal = document.getElementById('devVaultModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                showToast('Developer Vault Unlocked', 'success', 2500);
+            }
+        }
+
+        function closeDevVaultModal() {
+            const modal = document.getElementById('devVaultModal');
+            if (modal) {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function showToast(message, type, duration) {
+            type = type || 'info';
+            duration = duration || 3000;
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+
+            const toast = document.createElement('div');
+            toast.className = 'toast ' + type;
+
+            const dot = document.createElement('span');
+            dot.className = 'toast-dot dot-' + type;
+
+            const msgSpan = document.createElement('span');
+            msgSpan.textContent = message;
+
+            toast.appendChild(dot);
+            toast.appendChild(msgSpan);
+            container.appendChild(toast);
+
+            setTimeout(function() {
+                toast.classList.add('toast-fadeout');
+                setTimeout(function() {
+                    toast.remove();
+                }, 300);
+            }, duration);
+        }
+
+        function copyDevDiagnostics() {
+            const specs = [
+                'Storage Organizer Desktop Software Suite',
+                'Version: v3.27.8 (Stable)',
+                'Lead Architect: Aman Vishwakarma',
+                'GitHub: https://github.com/BeginnerAman',
+                'LinkedIn: https://www.linkedin.com/in/amanv-data',
+                'Instagram: https://www.instagram.com/amanv_data/',
+                'Runtime Engine: Python 3.13.7 (64-bit)',
+                'Desktop Shell: Microsoft Edge Chromium (WebView2)',
+                'Storage Engine: Atomic JSON Session History',
+                'Network Protocol: Loopback 127.0.0.1 (100% Offline)'
+            ].join('\n');
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(specs).then(function() {
+                    showToast('Diagnostics copied to clipboard', 'success');
+                }).catch(function() {
+                    fallbackCopy(specs);
+                });
+            } else {
+                fallbackCopy(specs);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                showToast('Diagnostics copied to clipboard', 'success');
+            } catch (err) {
+                showToast('Failed to copy diagnostics', 'error');
+            }
+            document.body.removeChild(ta);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDevVaultModal();
+            }
+        });
     </script>
 </body>
 </html>
