@@ -479,9 +479,13 @@
     <script>
         lucide.createIcons();
 
-        // Ensure clean instant hero framing on page load
-        if (!window.location.hash || window.location.hash === '#hero') {
-            window.scrollTo({ top: 0, behavior: 'instant' });
+        // On initial page load without a hash, automatically open at the #hero position
+        if (!window.location.hash) {
+            window.location.replace('#hero');
+            const hero = document.getElementById('hero');
+            if (hero) {
+                hero.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
         }
     </script>
 </body>
