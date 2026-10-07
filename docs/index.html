@@ -554,43 +554,43 @@
                     </a>
                 </div>
 
-                <!-- Live Diagnostics Section -->
+                <!-- Desktop Suite Core Architecture Section -->
                 <div class="dev-diag-box">
                     <div class="dev-diag-header">
-                        <span class="dev-diag-title">SYSTEM RUNTIME DIAGNOSTICS</span>
-                        <span class="dev-diag-status">ONLINE (127.0.0.1)</span>
+                        <span class="dev-diag-title">DESKTOP SUITE CORE ARCHITECTURE</span>
+                        <span class="dev-diag-status">100% OFFLINE / ZERO-TELEMETRY</span>
                     </div>
                     <div class="dev-diag-grid">
                         <div class="dev-diag-item">
                             <span class="dev-diag-k">Software Version:</span>
-                            <span class="dev-diag-v mono">v3.27.8 (Stable)</span>
+                            <span class="dev-diag-v mono">v3.27.8 (Stable Release)</span>
                         </div>
                         <div class="dev-diag-item">
                             <span class="dev-diag-k">Core Runtime:</span>
-                            <span class="dev-diag-v mono">Python 3.13.7 (64-bit)</span>
+                            <span class="dev-diag-v mono">Python 3.13.7 (64-bit Native Binary)</span>
                         </div>
                         <div class="dev-diag-item">
-                            <span class="dev-diag-k">GUI Shell:</span>
-                            <span class="dev-diag-v mono">Microsoft Edge Chromium (WebView2)</span>
+                            <span class="dev-diag-k">Desktop Shell:</span>
+                            <span class="dev-diag-v mono">Microsoft Edge WebView2 (Frameless UI)</span>
                         </div>
                         <div class="dev-diag-item">
                             <span class="dev-diag-k">Storage Engine:</span>
-                            <span class="dev-diag-v mono">Atomic JSON Session Logs</span>
+                            <span class="dev-diag-v mono">Atomic JSON Session Logs & Undo</span>
                         </div>
                         <div class="dev-diag-item">
-                            <span class="dev-diag-k">Network Protocol:</span>
-                            <span class="dev-diag-v mono">Loopback Daemon Only (100% Offline)</span>
+                            <span class="dev-diag-k">Security Model:</span>
+                            <span class="dev-diag-v mono">Local Loopback Only (Zero Cloud Calls)</span>
                         </div>
                         <div class="dev-diag-item">
-                            <span class="dev-diag-k">Architecture:</span>
-                            <span class="dev-diag-v mono">Unified Frameless Executive Shell</span>
+                            <span class="dev-diag-k">Binary Footprint:</span>
+                            <span class="dev-diag-v mono">~18.0 MB Standalone Executable</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="dev-modal-footer">
-                <button class="dev-btn dev-btn-outline" onclick="copyDevDiagnostics()">Copy System Specs</button>
+                <button class="dev-btn dev-btn-outline" onclick="copyDevDiagnostics()">Copy Software Specs</button>
                 <button class="dev-btn dev-btn-primary" onclick="closeDevVaultModal()">Done</button>
             </div>
         </div>
@@ -669,20 +669,22 @@
         function copyDevDiagnostics() {
             const specs = [
                 'Storage Organizer Desktop Software Suite',
-                'Version: v3.27.8 (Stable)',
+                'Version: v3.27.8 (Stable Release)',
                 'Lead Architect: Aman Vishwakarma',
                 'GitHub: https://github.com/BeginnerAman',
                 'LinkedIn: https://www.linkedin.com/in/amanv-data',
                 'Instagram: https://www.instagram.com/amanv_data/',
-                'Runtime Engine: Python 3.13.7 (64-bit)',
-                'Desktop Shell: Microsoft Edge Chromium (WebView2)',
-                'Storage Engine: Atomic JSON Session History',
-                'Network Protocol: Loopback 127.0.0.1 (100% Offline)'
+                'Core Runtime: Python 3.13.7 (64-bit Native Binary)',
+                'Desktop Shell: Microsoft Edge WebView2 (Frameless UI)',
+                'Storage Engine: Atomic JSON Session Logs & Undo',
+                'Security Model: Local Loopback Only (Zero Cloud Calls)',
+                'Binary Footprint: ~18.0 MB Standalone Executable',
+                'License: MIT Open Source'
             ].join('\n');
 
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(specs).then(function() {
-                    showToast('Diagnostics copied to clipboard', 'success');
+                    showToast('Software specs copied to clipboard', 'success');
                 }).catch(function() {
                     fallbackCopy(specs);
                 });
@@ -700,9 +702,9 @@
             ta.select();
             try {
                 document.execCommand('copy');
-                showToast('Diagnostics copied to clipboard', 'success');
+                showToast('Software specs copied to clipboard', 'success');
             } catch (err) {
-                showToast('Failed to copy diagnostics', 'error');
+                showToast('Failed to copy software specs', 'error');
             }
             document.body.removeChild(ta);
         }
